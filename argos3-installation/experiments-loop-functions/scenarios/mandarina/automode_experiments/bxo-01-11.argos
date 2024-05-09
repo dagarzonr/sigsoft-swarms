@@ -11,14 +11,19 @@
   <!-- ****************** -->
   <!-- * Loop functions * -->
   <!-- ****************** -->
-  <loop_functions library="/home/dgarzon/develop/sw-mandarina/argos3-installation/experiments-loop-functions/build/loop-functions/moca/libtutti_ag_loopfunc.so"
-   label="tutti_ag_loop_function">
+  <loop_functions library="/home/dgarzon/develop/sw-mandarina/argos3-installation/experiments-loop-functions/build/loop-functions/moca/libseq_loopfunc.so"
+   label="seq_loop_function">
        <params number_robots="20"
                build_arena="true"
-               number_edges="6"
-               number_boxes_per_edge="4"
+               number_edges="8"
+               number_boxes_per_edge="3"
                lenght_boxes="0.25"
-               maximization="true"/>
+               color_order="1"
+               number_colors="2"
+               blue_task="0"
+               red_task="1"
+               eval_task="1"
+               trn_time="600"/>
   </loop_functions>
 
   <!-- *************** -->
@@ -26,8 +31,8 @@
   <!-- *************** -->
   <controllers>
 	<!-- TRANSMITTER -->
-    <nn_rm_3dot0_controller id="evocolor"
-                        library="/home/dgarzon/develop/sw-mandarina/argos3-installation/neuroevolution/build/src/controllers/libnn_rm_3dot0.so">
+    <automode_controller id="automode"
+                        library="/home/dgarzon/develop/sw-mandarina/argos3-installation/automode/build/src/libautomode.so">
       <actuators>
         <epuck_wheels implementation="default" noise_std_dev="0.05"/>
         <epuck_rgb_leds implementation="default" medium="leds"/>
@@ -40,12 +45,12 @@
 		    <epuck_ground implementation="rot_z_only" noise_level="0.05" calibrated="true"/>
             <epuck_omnidirectional_camera implementation="rot_z_only" medium="leds" show_rays="false"/>
       </sensors>
-    <params readable="false" genome_file="/home/dgarzon/develop/sw-mandarina/argos3-installation/experiments-loop-functions/scenarios/tuttifrutti/control-software/aggregation/evocolor/champ_6"/>
+    <params readable="false" history='false' fsm-config="--nstates 1 --s0 1 --cle0 0"/>
 
                                         <!-- From sa -> n0x0 sb = n0x0 sb+1, (a < b) -->
                                         <!-- From sa -> n0x0 sb = n0x0 sb  , (a > b)-->
-    </nn_rm_3dot0_controller>
-
+    </automode_controller>
+    
   </controllers>
 
   <!-- ********* -->
@@ -71,91 +76,10 @@
     <orientation method="gaussian" mean="0,0,0" std_dev="360,0,0" />
     <entity quantity="20" max_trials="100">
       <e-puck id="epuck">
-       <controller config="evocolor" />
+       <controller config="automode" />
       </e-puck>
     </entity>
   </distribute>
-
-  <!--e-puck id="epuck_01_30">
-    <body orientation="0,0,0" position="0,-0.4,0" />
-    <controller config="evocolor" />
-  </e-puck>
-  <e-puck id="epuck_02_40">
-    <body orientation="0,0,0" position="0.4,-0.6,0" />
-    <controller config="evocolor" />
-  </e-puck>
-  <e-puck id="epuck_03_50">
-    <body orientation="0,0,0" position="0.4,-0.6,0" />
-    <controller config="evocolor" />
-  </e-puck>
-  <e-puck id="epuck_04_51">
-    <body orientation="0,0,0" position="0.4,-0.6,0" />
-    <controller config="evocolor" />
-  </e-puck>
-  <e-puck id="epuck_05_55">
-    <body orientation="0,0,0" position="0.4,-0.6,0" />
-    <controller config="evocolor" />
-  </e-puck>
-  <e-puck id="epuck_06_46">
-    <body orientation="0,0,0" position="0.4,-0.6,0" />
-    <controller config="evocolor" />
-  </e-puck>
-  <e-puck id="epuck_07_34">
-    <body orientation="0,0,0" position="0.4,-0.6,0" />
-    <controller config="evocolor" />
-  </e-puck>
-  <e-puck id="epuck_08_35">
-    <body orientation="0,0,0" position="0.4,-0.6,0" />
-    <controller config="evocolor" />
-  </e-puck>
-  <e-puck id="epuck_09_36">
-    <body orientation="0,0,0" position="0.4,-0.6,0" />
-    <controller config="evocolor" />
-  </e-puck>
-  <e-puck id="epuck_10_57">
-    <body orientation="0,0,0" position="0.4,-0.6,0" />
-    <controller config="evocolor" />
-  </e-puck>
-  <e-puck id="epuck_11_44">
-    <body orientation="0,0,0" position="0.4,-0.6,0" />
-    <controller config="evocolor" />
-  </e-puck>
-  <e-puck id="epuck_12_48">
-    <body orientation="0,0,0" position="0.4,-0.6,0" />
-    <controller config="evocolor" />
-  </e-puck>
-  <e-puck id="epuck_13_61">
-    <body orientation="0,0,0" position="0.4,-0.6,0" />
-    <controller config="evocolor" />
-  </e-puck>
-  <e-puck id="epuck_14_28">
-    <body orientation="0,0,0" position="0.4,-0.6,0" />
-    <controller config="evocolor" />
-  </e-puck>
-  <e-puck id="epuck_15_32">
-    <body orientation="0,0,0" position="0.4,-0.6,0" />
-    <controller config="evocolor" />
-  </e-puck>
-  <e-puck id="epuck_16_33">
-    <body orientation="0,0,0" position="0.4,-0.6,0" />
-    <controller config="evocolor" />
-  </e-puck>
-  <e-puck id="epuck_17_39">
-    <body orientation="0,0,0" position="0.4,-0.6,0" />
-    <controller config="evocolor" />
-  </e-puck>
-  <e-puck id="epuck_18_42">
-    <body orientation="0,0,0" position="0.4,-0.6,0" />
-    <controller config="evocolor" />
-  </e-puck>
-  <e-puck id="epuck_19_47">
-    <body orientation="0,0,0" position="0.4,-0.6,0" />
-    <controller config="evocolor" />
-  </e-puck>
-  <e-puck id="epuck_20_53">
-    <body orientation="0,0,0" position="0,0,0" />
-    <controller config="evocolor"/>
-  </e-puck-->
 
   <!-- The epucks are distributed by the AutoMoDeLoopFunctions. -->
 
@@ -184,7 +108,7 @@
   <!-- ***************** -->
   <!-- * Visualization * -->
   <!-- ***************** -->
-
+  
   <visualization>
     <qt-opengl>
       <camera>
