@@ -7,7 +7,7 @@
             {
               "name": "Exploration",
               "id": 0,
-              "display_name": "Exp",
+              "display_name": "EXP",
               "params": [
                   {
                       "name": "Steps Range",
@@ -15,31 +15,34 @@
                       "min": 0,
                       "max": 100,
                       "step": 1
+                  },
+                  {
+                    "name": "Color emitted",
+                    "id": "cle",
+                    "min": 0,
+                    "max": 6,
+                    "step": 1
                   }
               ]
           },
           {
               "name": "Stop",
               "id": 1,
-              "display_name": "Stop",
-              "params": []
-          },
-          {
-              "name": "Phototaxis",
-              "id": 2,
-              "display_name": "Pha",
-              "params": []
-          },
-          {
-              "name": "Anti-phototaxis",
-              "id": 3,
-              "display_name": "APha",
-              "params": []
+              "display_name": "STP",
+              "params": [
+                  {
+                      "name": "Color emitted",
+                      "id": "cle",
+                      "min": 0,
+                      "max": 6,
+                      "step": 1
+                  }
+              ]
           },
           {
               "name": "Attraction",
               "id": 4,
-              "display_name": "Attr",
+              "display_name": "ATT",
               "params": [
                   {
                       "name": "Attraction",
@@ -47,13 +50,20 @@
                       "min": 1,
                       "max": 5,
                       "step": 1
+                  },
+                  {
+                    "name": "Color emitted",
+                    "id": "cle",
+                    "min": 0,
+                    "max": 6,
+                    "step": 1
                   }
               ]
           },
           {
               "name": "Repulsion",
               "id": 5,
-              "display_name": "Rep",
+              "display_name": "REP",
               "params": [
                   {
                       "name": "Repulsion",
@@ -61,8 +71,57 @@
                       "min": 1,
                       "max": 5,
                       "step": 1
+                  },
+                  {
+                    "name": "Color emitted",
+                    "id": "cle",
+                    "min": 0,
+                    "max": 6,
+                    "step": 1
                   }
               ]
+          },
+          {
+            "name": "Color-following",
+            "id": 8,
+            "display_name": "CFL",
+            "params": [
+                {
+                    "name": "Color emitted",
+                    "id": "cle",
+                    "min": 0,
+                    "max": 6,
+                    "step": 1
+                },
+                {
+                    "name": "Color perceived",
+                    "id": "clr",
+                    "min": 1,
+                    "max": 6,
+                    "step": 1
+                }
+            ]
+          },
+          {
+            "name": "Color-elusion",
+            "id": 9,
+            "display_name": "CEL",
+            "params": [
+                {
+                    "name": "Color emitted",
+                    "id": "cle",
+                    "min": 0,
+                    "max": 6,
+                    "step": 1
+                },
+                {
+                    "name": "Color perceived",
+                    "id": "clr",
+                    "min": 1,
+                    "max": 6,
+                    "step": 1
+                }
+            ]
           }
         ]
     }
