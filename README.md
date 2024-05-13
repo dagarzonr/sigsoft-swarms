@@ -101,7 +101,7 @@ If you saw no error during the installation, it means everything went fine
 To test, enter to the directory:
 
 ```
-cd ~/argos3-installation/tuttifrutti/experiments-loop-functions/scenarios/tuttifrutti
+cd ~/sigsoft-swarms/argos3-installation/experiments-loop-functions/scenarios/tuttifrutti
 ```
 
 change the paths in the files tuttiAggregation.argos , tuttiStop.argos , tuttiForaging.argos

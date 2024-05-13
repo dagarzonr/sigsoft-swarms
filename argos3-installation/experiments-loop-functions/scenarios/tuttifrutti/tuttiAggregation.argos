@@ -11,7 +11,7 @@
   <!-- ****************** -->
   <!-- * Loop functions * -->
   <!-- ****************** -->
-  <loop_functions library="/home/dgarzon/develop/sw-mandarina/argos3-installation/experiments-loop-functions/build/loop-functions/moca/libtutti_ag_loopfunc.so"
+  <loop_functions library="/home/dgarzon/sigsoft-swarms/argos3-installation/experiments-loop-functions/build/loop-functions/moca/libtutti_ag_loopfunc.so"
    label="tutti_ag_loop_function">
        <params number_robots="20"
                build_arena="true"
@@ -27,7 +27,7 @@
   <controllers>
 	<!-- TRANSMITTER -->
     <automode_controller id="tuttifrutti"
-                        library="/home/dgarzon/develop/sw-mandarina/argos3-installation/automode/build/src/libautomode.so">
+                        library="/home/dgarzon/sigsoft-swarms/argos3-installation/AutoMoDe-tuttifrutti/build/src/libautomode.so">
       <actuators>
         <epuck_wheels implementation="default" noise_std_dev="0.05"/>
         <epuck_rgb_leds implementation="default" medium="leds"/>
