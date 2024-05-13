@@ -15,12 +15,16 @@ sudo apt-get install git cmake libfreeimage-dev libfreeimageplus-dev qt5-default
 
 Then, clone this repository in $HOME:
 
-`git clone https://github.com/dagarzonr/sigsoft-swarms.git`
+```
+git clone https://github.com/dagarzonr/sigsoft-swarms.git
+```
 
 Enter the directory and source the relevant environmental variables:
 
-`cd ~/sigsoft-swarms`
-`source argos3-env.sh`
+```
+cd ~/sigsoft-swarms
+source argos3-env.sh
+```
 
 Compiling and installing the ARGoS3 simulator:
 
@@ -37,59 +41,75 @@ make install
 
 Remove legacy versions of the e-puck library
 
-`rm -rf $ARGOS_INSTALL_PATH/argos3-dist/include/argos3/plugins/robots/e-puck`
-`rm -rf $ARGOS_INSTALL_PATH/argos3-dist/lib/argos3/lib*epuck*.so`
+```
+rm -rf $ARGOS_INSTALL_PATH/argos3-dist/include/argos3/plugins/robots/e-puck
+rm -rf $ARGOS_INSTALL_PATH/argos3-dist/lib/argos3/lib*epuck*.so
+```
 
 Compile and install locally the e-puck libraries v48
 
-`cd ~/sigsoft-swarms/argos3-installation/argos3-epuck`
-`mkdir build && cd build`
-`cmake -DCMAKE_INSTALL_PREFIX=$ARGOS_INSTALL_PATH/argos3-dist -DCMAKE_BUILD_TYPE=Release ../src`
-`make -j4`
-`make install`
+```
+cd ~/sigsoft-swarms/argos3-installation/argos3-epuck
+mkdir build && cd build
+cmake -DCMAKE_INSTALL_PREFIX=$ARGOS_INSTALL_PATH/argos3-dist -DCMAKE_BUILD_TYPE=Release ../src
+make -j4
+make install
+```
 
 Compile and install locally the MoCA libraries
 
-`cd ~/sigsoft-swarms/argos3-installation/argos3-arena`
-`mkdir build && cd build`
-`cmake -DCMAKE_INSTALL_PREFIX=$ARGOS_INSTALL_PATH/argos3-dist -DCMAKE_BUILD_TYPE=Release ../src`
-`make -j4`
-`make install`
+```
+cd ~/sigsoft-swarms/argos3-installation/argos3-arena
+mkdir build && cd build
+cmake -DCMAKE_INSTALL_PREFIX=$ARGOS_INSTALL_PATH/argos3-dist -DCMAKE_BUILD_TYPE=Release ../src
+make -j4
+make install
+```
 
 Compile and install locally the loop-functions libraries
 
-`cd ~/sigsoft-swarms/argos3-installation/experiments-loop-functions`
-`mkdir build && cd build`
-`cmake -DCMAKE_INSTALL_PREFIX=$ARGOS_INSTALL_PATH/argos3-dist -DCMAKE_BUILD_TYPE=Release ..`
-`make -j4`
-`make install`
+```
+cd ~/sigsoft-swarms/argos3-installation/experiments-loop-functions
+mkdir build && cd build
+cmake -DCMAKE_INSTALL_PREFIX=$ARGOS_INSTALL_PATH/argos3-dist -DCMAKE_BUILD_TYPE=Release ..
+make -j4
+make install
+```
 
 Compile and install locally the e-puck DAO libraries
 
-`cd ~/sigsoft-swarms/argos3-installation/demiurge-epuck-dao`
-`mkdir build && cd build`
-`cmake -DCMAKE_INSTALL_PREFIX=$ARGOS_INSTALL_PATH/argos3-dist -DCMAKE_BUILD_TYPE=Release ..`
-`make -j4`
-`make install`
+```
+cd ~/sigsoft-swarms/argos3-installation/demiurge-epuck-dao
+mkdir build && cd build
+cmake -DCMAKE_INSTALL_PREFIX=$ARGOS_INSTALL_PATH/argos3-dist -DCMAKE_BUILD_TYPE=Release ..
+make -j4
+make install
+```
 
 Compile AutoMoDe TuttiFrutti
 
-`cd ~/sigsoft-swarms/argos3-installation/AutoMoDe-tuttifrutti`
-`mkdir build && cd build`
-`cmake ..`
-`make -j4`
+```
+cd ~/sigsoft-swarms/argos3-installation/AutoMoDe-tuttifrutti
+mkdir build && cd build
+cmake ..
+make -j4
+```
 
 ## Final comments and testing
 
 If you saw no error during the installation, it means everything went fine
 To test, enter to the directory:
 
-`cd ~/argos3-installation/tuttifrutti/experiments-loop-functions/scenarios/tuttifrutti`
+```
+cd ~/argos3-installation/tuttifrutti/experiments-loop-functions/scenarios/tuttifrutti
+```
 
 change the paths in the files tuttiAggregation.argos , tuttiStop.argos , tuttiForaging.argos
 Then, run the experiments with the following command
 
-`argos3 -c tuttiAggregation.argos`
+```
+argos3 -c tuttiAggregation.argos
+```
 
 
 
