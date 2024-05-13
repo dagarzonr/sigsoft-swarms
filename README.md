@@ -31,7 +31,7 @@ Compiling and installing the ARGoS3 simulator:
 ```
 cd ~/sigsoft-swarms
 mkdir argos3-dist
-cd argos3
+cd ~/sigsoft-swarms/argos3-installation/argos3
 mkdir build && cd build
 cmake -DCMAKE_INSTALL_PREFIX=$ARGOS_INSTALL_PATH/argos3-dist -DCMAKE_BUILD_TYPE=Release -DARGOS_INSTALL_LDSOCONF=OFF ../src
 make -j4
