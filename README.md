@@ -9,7 +9,9 @@ Ubuntu 20.04 Focal Fossa
 
 To start, let's check we meet all dependencies:
 
-`sudo apt-get install git cmake libfreeimage-dev libfreeimageplus-dev qt5-default freeglut3-dev libxi-dev libxmu-dev liblua5.2-dev lua5.2 doxygen graphviz graphviz-dev asciidoc npm`
+```
+sudo apt-get install git cmake libfreeimage-dev libfreeimageplus-dev qt5-default freeglut3-dev libxi-dev libxmu-dev liblua5.2-dev lua5.2 doxygen graphviz graphviz-dev asciidoc npm
+```
 
 Then, clone this repository in $HOME:
 
@@ -22,14 +24,16 @@ Enter the directory and source the relevant environmental variables:
 
 Compiling and installing the ARGoS3 simulator:
 
-`cd ~/sigsoft-swarms`
-`mkdir argos3-dist`
-`cd argos3`
-`mkdir build && cd build`
-`cmake -DCMAKE_INSTALL_PREFIX=$ARGOS_INSTALL_PATH/argos3-dist -DCMAKE_BUILD_TYPE=Release -DARGOS_INSTALL_LDSOCONF=OFF ../src`
-`make -j4`
-`make doc`
-`make install`
+```
+cd ~/sigsoft-swarms
+mkdir argos3-dist
+cd argos3
+mkdir build && cd build
+cmake -DCMAKE_INSTALL_PREFIX=$ARGOS_INSTALL_PATH/argos3-dist -DCMAKE_BUILD_TYPE=Release -DARGOS_INSTALL_LDSOCONF=OFF ../src
+make -j4
+make doc
+make install
+```
 
 Remove legacy versions of the e-puck library
 
