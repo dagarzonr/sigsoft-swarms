@@ -95,20 +95,25 @@ cmake ..
 make -j4
 ```
 
-## Final comments and testing
-
-If you saw no error during the installation, it means everything went fine
-To test, enter to the directory:
+Install AutoMoDe-Editor to graphically design FSM
 
 ```
-cd ~/sigsoft-swarms/argos3-installation/experiments-loop-functions/scenarios/tuttifrutti
+cd ~/sigsoft-swarms/automode-editor
+npm install
 ```
 
-change the paths in the files tuttiAggregation.argos , tuttiStop.argos , tuttiForaging.argos
-Then, run the experiments with the following command
+## Running experiments
+
+To run an experiment, enter to the editor directory:
 
 ```
-argos3 -c tuttiAggregation.argos
+cd ~/sigsoft-swarms/automode-editor
+```
+
+then, run an experiment indicating the ID of the mission you want to test ID:{1..26}:
+
+```
+bash start_experiment.sh ID
 ```
 
 
