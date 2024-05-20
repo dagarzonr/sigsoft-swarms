@@ -1,5 +1,5 @@
 # Swarm Robotics
-### ACM SIGSOFT Summer School on Software Engineering for Robotics in Brussels
+2024 ACM SIGSOFT Summer School on Software Engineering for Robotics
 
 ## Requirements
 
