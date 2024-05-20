@@ -7,7 +7,7 @@
 			{
 				"name": "Black floor",
 				"id": 0,
-				"display_name": "Bflr",
+				"display_name": "BLF",
 				"params": [
 					{
 						"name": "Probability",
@@ -21,7 +21,7 @@
 			{
 				"name": "Gray floor",
 				"id": 1,
-				"display_name": "Gflr",
+				"display_name": "GRF",
 				"params": [
 					{
 						"name": "Probability",
@@ -35,7 +35,7 @@
 			{
 				"name": "White floor",
 				"id": 2,
-				"display_name": "WTF",
+				"display_name": "WHF",
 				"params": [
 					{
 						"name": "Probability",

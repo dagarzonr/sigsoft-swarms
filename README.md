@@ -1,5 +1,5 @@
 # Swarm Robotics
-ACM SIGSOFT Summer School on Software Engineering for Robotics in Brussels
+### ACM SIGSOFT Summer School on Software Engineering for Robotics in Brussels
 
 ## Requirements
 
@@ -7,26 +7,26 @@ Ubuntu 20.04 Focal Fossa
 
 ## Installation instructions
 
-To start, let's check we meet all dependencies:
+Install the dependencies and required packages:
 
 ```
 sudo apt-get install git cmake libfreeimage-dev libfreeimageplus-dev qt5-default freeglut3-dev libxi-dev libxmu-dev liblua5.2-dev lua5.2 doxygen graphviz graphviz-dev asciidoc npm
 ```
 
-Then, clone this repository in $HOME:
+Clone this repository in $HOME:
 
 ```
 git clone https://github.com/dagarzonr/sigsoft-swarms.git
 ```
 
-Enter the directory and source the relevant environmental variables:
+Enter the work directory and source the relevant environmental variables:
 
 ```
 cd ~/sigsoft-swarms
 source argos3-env.sh
 ```
 
-Compiling and installing the ARGoS3 simulator:
+Compile and install locally the ARGoS3 simulator:
 
 ```
 cd ~/sigsoft-swarms
@@ -39,7 +39,7 @@ make doc
 make install
 ```
 
-Remove legacy versions of the e-puck library
+Remove the legacy versions of the e-puck library
 
 ```
 rm -rf $ARGOS_INSTALL_PATH/argos3-dist/include/argos3/plugins/robots/e-puck
@@ -104,13 +104,20 @@ npm install
 
 ## Running experiments
 
+Enter the work directory and source the relevant environmental variables:
+
+```
+cd ~/sigsoft-swarms
+source argos3-env.sh
+```
+
 To run an experiment, enter to the editor directory:
 
 ```
 cd ~/sigsoft-swarms/automode-editor
 ```
 
-then, run an experiment indicating the ID of the mission you want to test ID:{1..26}:
+Run an experiment by executing the following script. Replace ID by the number of the mission you want to test, between 1 and 21:
 
 ```
 bash start_experiment.sh ID
