@@ -115,4 +115,23 @@ Run an experiment by executing the following script. Replace ID by the number of
 
 ```
 bash start_experiment.sh ID
+<<<<<<< HEAD
 ```
+=======
+```
+
+Open a browser and search for the following URL:
+
+```
+http://localhost:8088
+```
+
+This will spawn an interface that allows to create Finite State Machines to program the robots, and run simulations in ARGoS3. More information on the editor is available at
+
+```
+https://demiurge.be/publications/pdf_author_versions/KucHasVan-etal2021techrep.pdf
+```
+
+
+
+>>>>>>> 2a4737377a59b1dec119585dec30f6e444c9d4e4
