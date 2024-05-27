@@ -18,11 +18,11 @@
                number_edges="8"
                number_boxes_per_edge="3"
                lenght_boxes="0.25"
-               color_order="1"
+               color_order="0"
                number_colors="2"
                blue_task="0"
-               red_task="1"
-               eval_task="1"
+               red_task="2"
+               eval_task="3"
                trn_time="600"/>
   </loop_functions>
 

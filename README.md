@@ -111,18 +111,8 @@ cd ~/sigsoft-swarms
 source argos3-env.sh
 ```
 
-To run an experiment, enter to the editor directory:
-
-```
-cd ~/sigsoft-swarms/automode-editor
-```
-
 Run an experiment by executing the following script. Replace ID by the number of the mission you want to test, between 1 and 21:
 
 ```
 bash start_experiment.sh ID
 ```
-
-
-
-
