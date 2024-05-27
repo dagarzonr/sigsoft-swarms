@@ -26,11 +26,13 @@ cd ~/sigsoft-swarms
 source argos3-env.sh
 ```
 
-Compile and install locally the ARGoS3 simulator:
+Clone, compile and locallt install the ARGoS3 simulator:
 
 ```
 cd ~/sigsoft-swarms
 mkdir argos3-dist
+cd ~/sigsoft-swarms/argos3-installation
+git clone https://github.com/ilpincy/argos3.git -b 3.0.0-beta48
 cd ~/sigsoft-swarms/argos3-installation/argos3
 mkdir build && cd build
 cmake -DCMAKE_INSTALL_PREFIX=$ARGOS_INSTALL_PATH/argos3-dist -DCMAKE_BUILD_TYPE=Release -DARGOS_INSTALL_LDSOCONF=OFF ../src
