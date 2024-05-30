@@ -3,19 +3,26 @@
 
 ## Requirements
 
-Ubuntu 20.04 Focal Fossa
+Ubuntu 20.04 Focal Fossa (or Ubuntu 22.04 Jammy Jellyfish, experimental)
 
-## Installation instructions
-
-Install the dependencies and required packages:
+If you are use **Ubuntu 20.04**, install the following dependencies and required packages:
 
 ```
 sudo apt-get install git cmake libfreeimage-dev libfreeimageplus-dev qt5-default freeglut3-dev libxi-dev libxmu-dev liblua5.2-dev lua5.2 doxygen graphviz graphviz-dev asciidoc npm
 ```
 
+If you are use **Ubuntu 22.04**, install the following dependencies and required packages:
+
+```
+sudo apt-get install git cmake libfreeimage-dev libfreeimageplus-dev libqt6opengl6-dev freeglut3-dev libxi-dev libxmu-dev liblua5.2-dev lua5.2 doxygen graphviz graphviz-dev asciidoc npm
+```
+
+## Installation instructions
+
 Clone this repository in $HOME:
 
 ```
+cd ~
 git clone https://github.com/dagarzonr/sigsoft-swarms.git
 ```
 
@@ -130,3 +137,21 @@ This will spawn an interface that allows to create Finite State Machines to prog
 ```
 https://demiurge.be/publications/pdf_author_versions/KucHasVan-etal2021techrep.pdf
 ```
+
+## References
+
+If you found this repo useful, check out the related papers!
+
+1. D. Garzón Ramos and M. Birattari (2020). “Automatic design of collective behaviors for robots that can display and perceive colors”. In: Applied Sciences 10.13, p. 4654. DOi: 10.3390/app10134654
+
+2. D. Garzón Ramos, F. Pagnozzi, T. Stützle, and M. Birattari (2024). “Automatic design of robot swarms under concurrent design criteria: a study based on Iterated F-Race”. 
+
+3. J. Kuckling, K. Hasselmann, V. Van Pelt, C. Kiere, and Mauro Birattari (2021). AutoMoDe Editor: a visualization tool for AutoMoDe. Technical Report TR/IRIDIA/2021-009, IRIDIA, Universit´e Libre de Bruxelles, Brussels, Belgium.
+
+4. C. Pinciroli, V. Trianni, R. O’Grady, G. Pini, A. Brutschy, M. Brambilla, N. Mathews, E. Ferrante, G. A. Di Caro, F. Ducatelle, M. Birattari, L. M. Gambardella, and M. Dorigo (2012). ARGoS: a modular, parallel, multi-engine simulator for multi-robot systems. In: Swarm Intelligence 6.4. p. 271–295. DOi: 10.1007/s11721-012-0072-5.
+
+## Contact
+
+David Garzón Ramos
+Research Associate - University of Bristol
+<david.garzonramos@bristol.ac.uk>
